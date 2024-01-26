@@ -1,0 +1,12 @@
+[requires]
+drogon/1.9.2
+
+[generators]
+CMakeDeps
+CMakeToolchain
+
+[options]
+drogon*:with_ctl=True
+
+[layout]
+cmake_layout
