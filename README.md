@@ -1,9 +1,6 @@
 This is just a repository for building tests for the Drogon framework.
 
 ```
-mkdir build
-cd build
-conan install .. --build=missing -s compiler.cppstd=17 -s:build_type=Release
-cmake  --preset conan-default ..
-cmake --build . --config=Release
+conan install . --build=missing -s compiler.cppstd=17 -s build_type=Debug -c tools.cmake.cmaketoolchain:generator="Ninja Multi-Config"
+cmd.exe /c ".\build\generators\conanbuild.bat && cmake --preset conan-default  . && cmake --build ./build --config Debug" 
 ```
